@@ -1,29 +1,10 @@
 import { Router } from 'express';
 
+import ReportController from '../controllers/ReportController';
+
 const routes = Router();
+const reportController = new ReportController();
 
-routes.post('/report', async (request, response) => {
-  const {
-    responsible,
-    whatsapp,
-    location,
-    petName,
-    petDescription,
-    petPhoto,
-  } = request.body;
-
-  const createReport = new CreateReportService(); // Fazer arquivo service
-
-  const report = await createReport.execute({
-    responsible,
-    whatsapp,
-    location,
-    petName,
-    petDescription,
-    petPhoto,
-  });
-
-  return response.json(report);
-});
+routes.post('/report', reportController.index);
 
 export default routes;
