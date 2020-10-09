@@ -1,8 +1,15 @@
 import React from 'react';
 
-function App() {
+import Routes from './routes';
+
+import GlobalStyle from './assets/styles/global';
+
+const App: React.FC = () => {
   return (
-    <h1>React</h1>
+    <>
+      <Routes />
+      <GlobalStyle />
+    </>
   );
 }
 
