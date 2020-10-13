@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { MdExplore, MdPets, MdSearch } from 'react-icons/md';
 import logo from '../../assets/logo/logo.png';
@@ -28,8 +29,8 @@ const Home: React.FC = () => {
           <img src={logo} alt="find my pet" />
 
           <div className="account-buttons">
-            <a>Entrar</a>
-            <a>Criar uma conta</a>
+            <Link to="/">Entrar</Link>
+            <Link to="/">Criar uma conta</Link>
           </div>
         </Header>
 

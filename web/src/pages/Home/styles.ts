@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.div`
   height: 100vh;
@@ -39,6 +40,7 @@ export const Header = styled.div`
       font-size: 20px;
       color: #222a36;
       cursor: pointer;
+      text-decoration: none;
     }
 
     a + a {
@@ -126,6 +128,10 @@ export const MapButton = styled.button`
 
   background: #222a36;
 
+  &:hover {
+    background: ${shade(0.1, '#222a36')};
+  }
+
   p {
     max-width: 200px;
     margin: 60px;
@@ -151,6 +157,10 @@ export const ReportButton = styled.button`
   bottom: 0;
 
   background: #7ba8ff;
+
+  &:hover {
+    background: ${shade(0.1, '#7ba8ff')};
+  }
 
   p {
     color: #e4e0dc;
@@ -178,6 +188,10 @@ export const SearchButton = styled.button`
   right: 0;
 
   background: #31d08e;
+
+  &:hover {
+    background: ${shade(0.1, '#31d08e')};
+  }
 
   p {
     color: #e4e0dc;
