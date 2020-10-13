@@ -36,13 +36,13 @@ export const Header = styled.div`
 
     a {
       font-family: 'Overpass', sans-serif;
-      font-size: 24px;
+      font-size: 20px;
       color: #222a36;
       cursor: pointer;
     }
 
     a + a {
-      font-size: 16px;
+      font-size: 14px;
       color: #707070;
       margin-top: 8px;
     }
@@ -67,22 +67,23 @@ export const Title = styled.div`
   align-self: flex-start;
 
   h1 {
-    font-size: 96px;
+    font-size: 80px;
     margin-bottom: 24px;
   }
 
   h3 {
-    font-size: 36px;
+    font-size: 24px;
+    line-height: 34px;
   }
 `;
 
 export const Gallery = styled.div`
-  height: 136px;
+  height: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
 
-  margin-top: 80px;
+  margin-top: 48px;
 
   img {
     width: 100%;
@@ -94,7 +95,8 @@ export const Gallery = styled.div`
 export const Description = styled.div`
   align-self: flex-start;
   font-family: 'Overpass', sans-serif;
-  font-size: 20px;
+  font-size: 14px;
+  line-height: 20px;
   color: #707070;
 
   margin-top: 64px;
@@ -125,21 +127,25 @@ export const MapButton = styled.button`
   background: #222a36;
 
   p {
-    position: absolute;
-    max-width: 260px;
-    top: 0;
-    margin: 36px;
+    max-width: 200px;
+    margin: 60px;
+    margin-bottom: 260px;
     color: #e4e0dc;
-    font-size: 68px;
+    font-size: 60px;
+    line-height: 50px;
+    text-align: start;
   }
 
   svg {
-    right: 36px;
-    top: 0px;
+    position: absolute;
+    right: 5vw;
+    top: 15vh;
   }
 `;
 
 export const ReportButton = styled.button`
+  cursor: pointer;
+  position: realtive;
   width: 50%;
   height: 50vh;
   bottom: 0;
@@ -148,14 +154,24 @@ export const ReportButton = styled.button`
 
   p {
     color: #e4e0dc;
-    font-size: 32px;
+    font-size: 40px;
+    position: absolute;
+    text-align: end;
+    max-width: 260px;
+    margin: 40px;
+    bottom: 8vh;
   }
 
   svg {
+    position: absolute;
+    right: 36vw;
+    bottom: 36vh;
   }
 `;
 
 export const SearchButton = styled.button`
+  cursor: pointer;
+  position: realtive;
   width: 50%;
   height: 50vh;
   bottom: 0;
@@ -165,6 +181,17 @@ export const SearchButton = styled.button`
 
   p {
     color: #e4e0dc;
-    font-size: 32px;
+    font-size: 40px;
+    position: absolute;
+    text-align: end;
+    max-width: 260px;
+    margin: 40px;
+    bottom: 8vh;
+  }
+
+  svg {
+    position: absolute;
+    right: 14vw;
+    bottom: 36vh;
   }
 `;

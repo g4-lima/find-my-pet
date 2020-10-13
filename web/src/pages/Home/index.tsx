@@ -58,16 +58,16 @@ const Home: React.FC = () => {
       <Buttons>
         <MapButton>
           <p>Ver no mapa</p>
-          <MdExplore color="#E4E0DC" size={240} />
+          <MdExplore color="#E4E0DC" size={180} />
         </MapButton>
 
         <ReportButton>
-          <MdPets size={140} color="#222a36" />
+          <MdPets size={80} color="#222a36" />
           <p>Reportar Pet perdido</p>
         </ReportButton>
 
         <SearchButton>
-          <MdSearch size={140} color="#222a36" />
+          <MdSearch size={80} color="#222a36" />
           <p>Pesquisar Pets</p>
         </SearchButton>
       </Buttons>
