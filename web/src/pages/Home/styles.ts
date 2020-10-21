@@ -116,96 +116,105 @@ export const Description = styled.div`
 `;
 
 export const Buttons = styled.div`
+  display: flex;
+  flex-direction: column;
   flex: 1;
   font-family: 'Roboto', sans-serif;
-`;
 
-export const MapButton = styled.button`
-  cursor: pointer;
-  position: realtive;
-  width: 100%;
-  height: 50vh;
+  .map-button {
+    text-decoration: none;
+    cursor: pointer;
+    position: realtive;
+    width: 100%;
+    height: 50vh;
 
-  background: #222a36;
+    background: #222a36;
 
-  &:hover {
-    background: ${shade(0.1, '#222a36')};
-  }
+    &:hover {
+      background: ${shade(0.1, '#222a36')};
+    }
 
-  p {
-    max-width: 200px;
-    margin: 60px;
-    margin-bottom: 260px;
-    color: #e4e0dc;
-    font-size: 60px;
-    line-height: 50px;
-    text-align: start;
-  }
+    p {
+      max-width: 200px;
+      margin: 60px;
+      margin-bottom: 260px;
+      color: #e4e0dc;
+      font-size: 60px;
+      line-height: 50px;
+      text-align: start;
+    }
 
-  svg {
-    position: absolute;
-    right: 5vw;
-    top: 15vh;
-  }
-`;
-
-export const ReportButton = styled.button`
-  cursor: pointer;
-  position: realtive;
-  width: 50%;
-  height: 50vh;
-  bottom: 0;
-
-  background: #7ba8ff;
-
-  &:hover {
-    background: ${shade(0.1, '#7ba8ff')};
-  }
-
-  p {
-    color: #e4e0dc;
-    font-size: 40px;
-    position: absolute;
-    text-align: end;
-    max-width: 260px;
-    margin: 40px;
-    bottom: 8vh;
-  }
-
-  svg {
-    position: absolute;
-    right: 36vw;
-    bottom: 36vh;
+    svg {
+      position: absolute;
+      right: 5vw;
+      top: 15vh;
+    }
   }
 `;
 
-export const SearchButton = styled.button`
-  cursor: pointer;
-  position: realtive;
-  width: 50%;
-  height: 50vh;
-  bottom: 0;
-  right: 0;
+export const HorizontalButtons = styled.div`
+  display: flex;
+  flex: 1;
+  font-family: 'Roboto', sans-serif;
 
-  background: #31d08e;
+  .report-button {
+    cursor: pointer;
+    position: realtive;
+    width: 50%;
+    height: 50vh;
+    bottom: 0;
 
-  &:hover {
-    background: ${shade(0.1, '#31d08e')};
+    background: #7ba8ff;
+
+    &:hover {
+      background: ${shade(0.1, '#7ba8ff')};
+    }
+
+    p {
+      color: #e4e0dc;
+      font-size: 40px;
+      position: absolute;
+      text-align: end;
+      max-width: 260px;
+      margin: 40px;
+      bottom: 8vh;
+    }
+
+    svg {
+      position: absolute;
+      right: 36vw;
+      bottom: 36vh;
+    }
   }
 
-  p {
-    color: #e4e0dc;
-    font-size: 40px;
-    position: absolute;
-    text-align: end;
-    max-width: 260px;
-    margin: 40px;
-    bottom: 8vh;
-  }
+  .search-button {
+    cursor: pointer;
+    position: realtive;
+    width: 50%;
+    height: 50vh;
+    bottom: 0;
+    right: 0;
 
-  svg {
-    position: absolute;
-    right: 14vw;
-    bottom: 36vh;
+    background: #31d08e;
+
+    &:hover {
+      background: ${shade(0.1, '#31d08e')};
+    }
+
+    p {
+      color: #e4e0dc;
+      font-size: 40px;
+      position: absolute;
+      text-align: end;
+      max-width: 260px;
+      margin: 40px;
+      bottom: 8vh;
+    }
+
+    svg {
+      position: absolute;
+      right: 14vw;
+      bottom: 36vh;
+    }
   }
 `;

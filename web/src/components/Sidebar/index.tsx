@@ -12,7 +12,7 @@ const Sidebar: React.FC = () => {
         <MdHome color="#E4E0DC" size={80} />
       </Link>
 
-      <Link to="/" className="button-map">
+      <Link to="/map" className="button-map">
         <MdExplore color="#E4E0DC" size={80} />
       </Link>
 

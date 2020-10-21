@@ -11,14 +11,12 @@ import {
   Container,
   Content,
   Buttons,
+  HorizontalButtons,
   Header,
   Box,
   Title,
   Gallery,
   Description,
-  MapButton,
-  ReportButton,
-  SearchButton,
 } from './styles';
 
 const Home: React.FC = () => {
@@ -57,21 +55,22 @@ const Home: React.FC = () => {
       </Content>
 
       <Buttons>
-        <MapButton>
+        <Link to="/map" className="map-button">
           <p>Ver no mapa</p>
           <MdExplore color="#E4E0DC" size={180} />
-          <Link to="/PetsMap" />
-        </MapButton>
+        </Link>
 
-        <ReportButton>
-          <MdPets size={80} color="#222a36" />
-          <p>Reportar Pet perdido</p>
-        </ReportButton>
+        <HorizontalButtons>
+          <Link to="/" className="report-button">
+            <MdPets size={80} color="#222a36" />
+            <p>Reportar Pet perdido</p>
+          </Link>
 
-        <SearchButton>
-          <MdSearch size={80} color="#222a36" />
-          <p>Pesquisar Pets</p>
-        </SearchButton>
+          <Link to="/" className="search-button">
+            <MdSearch size={80} color="#222a36" />
+            <p>Pesquisar Pets</p>
+          </Link>
+        </HorizontalButtons>
       </Buttons>
     </Container>
   );
