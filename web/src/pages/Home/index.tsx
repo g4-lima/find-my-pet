@@ -60,6 +60,7 @@ const Home: React.FC = () => {
         <MapButton>
           <p>Ver no mapa</p>
           <MdExplore color="#E4E0DC" size={180} />
+          <Link to="/PetsMap" />
         </MapButton>
 
         <ReportButton>
