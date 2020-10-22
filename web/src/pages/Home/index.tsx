@@ -61,7 +61,7 @@ const Home: React.FC = () => {
         </Link>
 
         <HorizontalButtons>
-          <Link to="/" className="report-button">
+          <Link to="/report" className="report-button">
             <MdPets size={80} color="#222a36" />
             <p>Reportar Pet perdido</p>
           </Link>

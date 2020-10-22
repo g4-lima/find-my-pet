@@ -20,7 +20,7 @@ const Sidebar: React.FC = () => {
         <MdSearch color="#E4E0DC" size={80} />
       </Link>
 
-      <Link to="/" className="button-report">
+      <Link to="/report" className="button-report">
         <MdPets color="#E4E0DC" size={80} />
       </Link>
     </Container>
