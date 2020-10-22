@@ -5,27 +5,92 @@ export const Container = styled.div`
   margin-right: 160px;
 `;
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   margin: 64px auto;
-  width: 90%;
+  width: 1200px;
 
   background: #ffff;
   border: 3px solid #d3e2d5;
   border-radius: 8px;
 `;
 
+export const InputBlock = styled.div`
+  width: 800px;
+  margin: 8px auto;
+
+  label {
+    color: #222a36;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    margin: 16px 0 16px;
+  }
+
+  input {
+    color: #222a36;
+    width: 100%;
+    background: #d3e2d5;
+    border-radius: 8px;
+    padding: 12px;
+    border: solid 2px darkgray;
+    margin-bottom: 16px;
+    margin-top: 8px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #222a36;
+    &::placeholder {
+      color: #666360;
+    }
+  }
+
+  textarea {
+    color: #222a36;
+    width: 100%;
+    background: #d3e2d5;
+    border-radius: 8px;
+    padding: 12px;
+    border: solid 2px darkgray;
+    height: 160px;
+    margin-bottom: 16px;
+    margin-top: 8px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #222a36;
+    &::placeholder {
+      color: #666360;
+    }
+  }
+`;
+
 export const MapContainer = styled.div`
-  width: 80vw;
+  max-width: 1200px;
+  margin-bottom: 32px;
 
   h3 {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     color: #222a36;
-    padding: 12px;
+    margin: 16px 188px 16px;
   }
 
   .leaflet-container {
     border: 1px solid #d3e2e5;
     border-radius: 8px;
   }
+`;
+
+export const Button = styled.button`
+  cursor: pointer;
+  width: 200px;
+  margin: 24px auto;
+  padding: 24px;
+  border-radius: 8px;
+  background: #31d08e;
+  color: #222a36;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  margin-left: 800px;
 `;
