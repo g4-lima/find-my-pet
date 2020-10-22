@@ -131,7 +131,7 @@ export const Buttons = styled.div`
     background: #222a36;
 
     &:hover {
-      background: ${shade(0.1, '#222a36')};
+      background: ${shade(0.2, '#222a36')};
     }
 
     p {

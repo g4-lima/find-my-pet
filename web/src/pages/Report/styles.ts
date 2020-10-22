@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.div`
   display: flex;
@@ -12,6 +13,24 @@ export const FormContainer = styled.form`
   background: #ffff;
   border: 3px solid #d3e2d5;
   border-radius: 8px;
+`;
+
+export const MapContainer = styled.div`
+  max-width: 1200px;
+  margin-bottom: 32px;
+
+  h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    color: #222a36;
+    margin: 16px 188px 16px;
+  }
+
+  .leaflet-container {
+    border: 1px solid #d3e2e5;
+    border-radius: 8px;
+  }
 `;
 
 export const InputBlock = styled.div`
@@ -63,22 +82,35 @@ export const InputBlock = styled.div`
       color: #666360;
     }
   }
-`;
 
-export const MapContainer = styled.div`
-  max-width: 1200px;
-  margin-bottom: 32px;
+  .new-image {
+    height: 80px;
+    background: #d3e2d5;
+    border: 1px dashed #222a36;
+    border-radius: 8px;
+    cursor: pointer;
 
-  h3 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    color: #222a36;
-    margin: 16px 188px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .leaflet-container {
-    border: 1px solid #d3e2e5;
-    border-radius: 8px;
+  input[type='file'] {
+    visibility: hidden;
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .images-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 16px;
   }
 `;
 
@@ -93,4 +125,8 @@ export const Button = styled.button`
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   margin-left: 800px;
+
+  &:hover {
+    background: ${shade(0.2, '#31d08e')};
+  }
 `;

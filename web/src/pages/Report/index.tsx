@@ -1,5 +1,6 @@
 import React from 'react';
 import { Map, TileLayer } from 'react-leaflet';
+import { MdAddAPhoto } from 'react-icons/md';
 
 import Sidebar from '../../components/Sidebar';
 
@@ -35,6 +36,26 @@ const Report: React.FC = () => {
         <InputBlock>
           <label htmlFor="pet-name">Nome do Pet</label>
           <input id="pet-name" />
+        </InputBlock>
+
+        <InputBlock>
+          <label htmlFor="images">Fotos</label>
+
+          <div className="images-container">
+            {/* {previewImages.map(image => {
+                  return <img key={image} src={image} alt={name} />;
+                })} */}
+
+            <label htmlFor="image[]" className="new-image">
+              <MdAddAPhoto size={24} color="#7ba8ff" />
+            </label>
+          </div>
+          <input
+            multiple
+            // onChange={handleSelectImages}
+            type="file"
+            id="image[]"
+          />
         </InputBlock>
 
         <InputBlock>
