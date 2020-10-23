@@ -39,7 +39,7 @@ const Report: React.FC = () => {
         </InputBlock>
 
         <InputBlock>
-          <label htmlFor="images">Fotos</label>
+          <label htmlFor="images">Foto</label>
 
           <div className="images-container">
             {/* {previewImages.map(image => {

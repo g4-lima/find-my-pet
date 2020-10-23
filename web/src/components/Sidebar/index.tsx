@@ -16,7 +16,7 @@ const Sidebar: React.FC = () => {
         <MdExplore color="#E4E0DC" size={80} />
       </Link>
 
-      <Link to="/" className="button-search">
+      <Link to="/list" className="button-search">
         <MdSearch color="#E4E0DC" size={80} />
       </Link>
 

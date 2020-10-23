@@ -60,6 +60,8 @@ export const InputBlock = styled.div`
     color: #222a36;
     &::placeholder {
       color: #666360;
+      font-weight: 400;
+      font-size: 16px;
     }
   }
 
@@ -107,11 +109,11 @@ export const InputBlock = styled.div`
     border-radius: 20px;
   }
 
-  .images-container {
+  /* .images-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 16px;
-  }
+  } */
 `;
 
 export const Button = styled.button`

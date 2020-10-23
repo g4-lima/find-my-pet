@@ -66,7 +66,7 @@ const Home: React.FC = () => {
             <p>Reportar Pet perdido</p>
           </Link>
 
-          <Link to="/" className="search-button">
+          <Link to="/list" className="search-button">
             <MdSearch size={80} color="#222a36" />
             <p>Pesquisar Pets</p>
           </Link>
