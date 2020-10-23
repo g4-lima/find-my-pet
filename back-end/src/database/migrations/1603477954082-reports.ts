@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export default class CreateReports1602105800911 implements MigrationInterface {
+export default class reports1603477954082 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
@@ -14,36 +14,31 @@ export default class CreateReports1602105800911 implements MigrationInterface {
             default: 'uuid_generate_v4()',
           },
           {
+            name: 'latitude',
+            type: 'decimal',
+          },
+          {
+            name: 'longitude',
+            type: 'decimal',
+          },
+          {
             name: 'responsible',
             type: 'varchar',
+          },
+          {
+            name: 'pet_name',
+            type: 'varchar',
+          },
+          {
+            name: 'pet_description',
+            type: 'text',
           },
           {
             name: 'whatsapp',
             type: 'varchar',
           },
           {
-            name: 'location',
-            type: 'varchar',
-          },
-          {
-            name: 'petName',
-            type: 'varchar',
-          },
-          {
-            name: 'petDescription',
-            type: 'varchar',
-          },
-          {
-            name: 'petPhoto',
-            type: 'varchar',
-          },
-          {
             name: 'created_at',
-            type: 'timestamp',
-            default: 'now()',
-          },
-          {
-            name: 'updated_at',
             type: 'timestamp',
             default: 'now()',
           },

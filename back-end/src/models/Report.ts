@@ -11,28 +11,25 @@ class Report {
   id: string;
 
   @Column()
+  latitude: number;
+
+  @Column()
+  longitude: number;
+
+  @Column()
   responsible: string;
+
+  @Column()
+  pet_name: string;
+
+  @Column()
+  pet_description: string;
 
   @Column()
   whatsapp: string;
 
-  @Column()
-  location: string;
-
-  @Column()
-  petName: string;
-
-  @Column()
-  petDescription: string;
-
-  @Column()
-  petPhoto: string;
-
   @CreateDateColumn()
   created_at: Date;
-
-  @CreateDateColumn()
-  updated_at: Date;
 }
 
 export default Report;
