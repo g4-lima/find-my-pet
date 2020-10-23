@@ -16,7 +16,7 @@ export const FormContainer = styled.form`
 `;
 
 export const MapContainer = styled.div`
-  max-width: 1200px;
+  max-width: 800px;
   margin-bottom: 32px;
 
   h3 {
@@ -30,6 +30,8 @@ export const MapContainer = styled.div`
   .leaflet-container {
     border: 1px solid #d3e2e5;
     border-radius: 8px;
+    width: 800px;
+    margin: 16px 188px 16px;
   }
 `;
 

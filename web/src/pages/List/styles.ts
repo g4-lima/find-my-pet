@@ -83,6 +83,10 @@ export const Card = styled.div`
   display: flex;
   flex-direction: row;
 
+  & {
+    margin-bottom: 32px;
+  }
+
   img {
     width: 260px;
     height: 100%;
