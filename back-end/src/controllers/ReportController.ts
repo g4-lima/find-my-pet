@@ -6,7 +6,9 @@ export default class ReportController {
   public async get(request: Request, response: Response): Promise<any> {
     const reportRepository = getRepository(Report);
 
-    const report = await reportRepository.find();
+    const report = await reportRepository.find({
+      relations: ['images'],
+    });
 
     return response.json(report);
   }
@@ -14,27 +16,32 @@ export default class ReportController {
   public async create(request: Request, response: Response): Promise<Response> {
     const {
       responsible,
+      latitude,
+      longitude,
+      pet_name,
+      pet_description,
       whatsapp,
-      location,
-      petName,
-      petDescription,
-      petPhoto,
     } = request.body;
 
     const reportRepository = getRepository(Report);
 
-    const report = await reportRepository.create({
+    const image = request.file;
+
+    const data = {
       responsible,
+      latitude,
+      longitude,
+      pet_name,
+      pet_description,
       whatsapp,
-      location,
-      petName,
-      petDescription,
-      petPhoto,
-    });
+      image,
+    };
+
+    const report = reportRepository.create(data);
 
     await reportRepository.save(report);
 
-    return response.json(report);
+    return response.status(201).json(report);
   }
 
   public async delete(request: Request, response: Response): Promise<any> {
