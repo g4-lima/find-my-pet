@@ -58,7 +58,7 @@ export const InputBlock = styled.div`
 
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     color: #222a36;
     &::placeholder {
       color: #666360;
@@ -80,7 +80,7 @@ export const InputBlock = styled.div`
 
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     color: #222a36;
     &::placeholder {
       color: #666360;
