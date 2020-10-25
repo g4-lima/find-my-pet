@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import { MdArrowForward } from 'react-icons/md';
 
+import api from '../../services/api';
 import imgGallery1 from '../../assets/img/fmp1.jpeg';
 import Sidebar from '../../components/Sidebar';
 import markerImg from '../../assets/logo/marker4.svg';
 
 import { Container } from './styles';
 import 'leaflet/dist/leaflet.css';
+
+interface Report {
+  id: string;
+  latitude: number;
+  longitude: number;
+  pet_name: string;
+}
 
 const PetsMap: React.FC = () => {
   const icon = new Icon({
@@ -19,29 +27,41 @@ const PetsMap: React.FC = () => {
     popupAnchor: [8, -60],
   });
 
+  const [reports, setReports] = useState<Report[]>([]);
+
+  useEffect(() => {
+    api.get('/list').then(response => setReports(response.data));
+  }, []);
+
   return (
     <Container>
       <Map
         center={[-23.0422819, -46.9708041]}
-        zoom={14}
+        zoom={13}
         style={{ width: '100vw', height: '100vh' }}
       >
         <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-        <Marker position={[-23.0422819, -46.9708041]} icon={icon}>
-          <Popup
-            closeButton={false}
-            minWidth={160}
-            maxWidth={160}
-            className="map-popup"
+        {reports.map(report => (
+          <Marker
+            key={report.id}
+            position={[report.latitude, report.longitude]}
+            icon={icon}
           >
-            <img src={imgGallery1} alt="imagem da galeria" />
-            NomedoPet
-            <Link to="/list">
-              <MdArrowForward size={20} color="#222a36" />
-            </Link>
-          </Popup>
-        </Marker>
+            <Popup
+              closeButton={false}
+              minWidth={160}
+              maxWidth={160}
+              className="map-popup"
+            >
+              <img src={imgGallery1} alt="imagem da galeria" />
+              {report.pet_name}
+              <Link to="/list">
+                <MdArrowForward size={20} color="#222a36" />
+              </Link>
+            </Popup>
+          </Marker>
+        ))}
       </Map>
 
       <Sidebar />

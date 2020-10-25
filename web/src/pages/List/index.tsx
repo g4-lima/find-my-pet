@@ -73,46 +73,6 @@ const List: React.FC = () => {
               </div>
             </Card>
           ))}
-
-          <Card>
-            <div className="cover-photo">
-              <img src={AvatarImg} alt="" />
-            </div>
-            <div className="card-box">
-              <div className="details">
-                <div className="infos">
-                  <h2>Pet name</h2>
-                  <p>Pet description</p>
-                  <p>Responsible: Nome do Responsável</p>
-                </div>
-                <div className="location">
-                  <MdLocationOn size={12} />
-                  <h3>3 km</h3>
-                </div>
-              </div>
-              <button type="button">Entar em contato</button>
-            </div>
-          </Card>
-
-          <Card>
-            <div className="cover-photo">
-              <img src={AvatarImg} alt="" />
-            </div>
-            <div className="card-box">
-              <div className="details">
-                <div className="infos">
-                  <h2>Pet name</h2>
-                  <p>Pet description</p>
-                  <p>Responsible: Nome do Responsável</p>
-                </div>
-                <div className="location">
-                  <MdLocationOn size={12} />
-                  <h3>3 km</h3>
-                </div>
-              </div>
-              <button type="button">Entar em contato</button>
-            </div>
-          </Card>
         </ListContainer>
       </Content>
       <Sidebar />
