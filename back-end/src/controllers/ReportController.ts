@@ -25,7 +25,7 @@ export default class ReportController {
 
       return response.json(report);
     } catch (err) {
-      response.status(404).json({ message: 'Pet não encontrado' });
+      return response.status(404).json({ message: 'Pet não encontrado' });
     }
   }
 
