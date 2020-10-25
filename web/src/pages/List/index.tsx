@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { MdLocationOn } from 'react-icons/md';
 
 import api from '../../services/api';
 import Sidebar from '../../components/Sidebar';
-import AvatarImg from '../../assets/img/fmp1.jpeg';
+import Card, { Report } from '../../components/Card';
 
 import {
   Container,
@@ -11,18 +10,7 @@ import {
   ListContainer,
   SearchOptions,
   InputBlock,
-  Card,
 } from './styles';
-
-interface Report {
-  id: string;
-  latitude: number;
-  longitude: number;
-  responsible: string;
-  pet_name: string;
-  pet_description: string;
-  wahtsapp: string;
-}
 
 const List: React.FC = () => {
   const [reports, setReports] = useState<Report[]>([]);
@@ -52,27 +40,9 @@ const List: React.FC = () => {
         </SearchOptions>
         <hr />
         <ListContainer>
-          {reports.map(report => (
-            <Card key={report.id}>
-              <div className="cover-photo">
-                <img src={AvatarImg} alt="" />
-              </div>
-              <div className="card-box">
-                <div className="details">
-                  <div className="infos">
-                    <h2>{report.pet_name}</h2>
-                    <p>{report.pet_description}</p>
-                    <p>Responsible: {report.responsible}</p>
-                  </div>
-                  <div className="location">
-                    <MdLocationOn size={12} />
-                    <h3>3 km</h3>
-                  </div>
-                </div>
-                <button type="button">Entar em contato</button>
-              </div>
-            </Card>
-          ))}
+          {reports.map((report: Report) => {
+            return <Card key={report.id} report={report} />;
+          })}
         </ListContainer>
       </Content>
       <Sidebar />

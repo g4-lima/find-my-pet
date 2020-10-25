@@ -7,7 +7,7 @@ import { MdArrowForward } from 'react-icons/md';
 import api from '../../services/api';
 import imgGallery1 from '../../assets/img/fmp1.jpeg';
 import Sidebar from '../../components/Sidebar';
-import markerImg from '../../assets/logo/marker4.svg';
+import markerImg from '../../assets/logo/marker2.svg';
 
 import { Container } from './styles';
 import 'leaflet/dist/leaflet.css';
@@ -56,7 +56,7 @@ const PetsMap: React.FC = () => {
             >
               <img src={imgGallery1} alt="imagem da galeria" />
               {report.pet_name}
-              <Link to="/list">
+              <Link to={`/list/${report.id}`}>
                 <MdArrowForward size={20} color="#222a36" />
               </Link>
             </Popup>

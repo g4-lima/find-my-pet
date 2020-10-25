@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import PetsMap from './pages/PetsMap';
 import Report from './pages/Report';
 import List from './pages/List';
+import PetDetail from './pages/PetDetails';
 
 const Routes: React.FC = () => {
   return (
@@ -13,7 +14,8 @@ const Routes: React.FC = () => {
         <Route path="/" exact component={Home} />
         <Route path="/map" component={PetsMap} />
         <Route path="/report" component={Report} />
-        <Route path="/list" component={List} />
+        <Route path="/list" exact component={List} />
+        <Route path="/list/:id" component={PetDetail} />
       </Switch>
     </BrowserRouter>
   );
