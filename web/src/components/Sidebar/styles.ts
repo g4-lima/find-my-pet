@@ -70,14 +70,20 @@ export const Container = styled.div`
   .button-report {
     background: #7ba8ff;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
 
     cursor: pointer;
 
-    svg {
-      height: 100%;
-      width: 100%;
+    .add-icon {
+      position: absolute;
+      top: 52%;
+      right: 68%;
+    }
 
-      padding: 40px;
+    .pet-icon {
+      margin: auto;
     }
 
     &:hover {

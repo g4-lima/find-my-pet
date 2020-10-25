@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { MdHome, MdExplore, MdPets, MdSearch } from 'react-icons/md';
+import { MdHome, MdExplore, MdPets, MdSearch, MdAdd } from 'react-icons/md';
 
 import { Container } from './styles';
 
@@ -21,7 +21,8 @@ const Sidebar: React.FC = () => {
       </Link>
 
       <Link to="/report" className="button-report">
-        <MdPets color="#E4E0DC" size={80} />
+        <MdAdd className="add-icon" color="#E4E0DC" size={32} />
+        <MdPets className="pet-icon" color="#E4E0DC" size={80} />
       </Link>
     </Container>
   );
