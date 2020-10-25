@@ -3,14 +3,30 @@ import { getRepository } from 'typeorm';
 import Report from '../models/Report';
 
 export default class ReportController {
-  public async get(request: Request, response: Response): Promise<any> {
+  public async get(request: Request, response: Response): Promise<Response> {
     const reportRepository = getRepository(Report);
 
     const report = await reportRepository.find({
-      relations: ['images'],
+      // relations: ['images'],
     });
 
     return response.json(report);
+  }
+
+  public async index(request: Request, response: Response): Promise<Response> {
+    const reportRepository = getRepository(Report);
+
+    const { id } = request.params;
+
+    try {
+      const report = await reportRepository.findOne({
+        id,
+      });
+
+      return response.json(report);
+    } catch (err) {
+      response.status(404).json({ message: 'Pet não encontrado' });
+    }
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
@@ -25,7 +41,8 @@ export default class ReportController {
 
     const reportRepository = getRepository(Report);
 
-    const image = request.file;
+    // const requestImages = request.files as Express.Multer.File[];
+    // const images = requestImages.map(image => ({ path: image.filename }));
 
     const data = {
       responsible,
@@ -34,7 +51,7 @@ export default class ReportController {
       pet_name,
       pet_description,
       whatsapp,
-      image,
+      // images,
     };
 
     const report = reportRepository.create(data);
@@ -54,17 +71,17 @@ export default class ReportController {
     return response.status(200).json({ message: 'report deleted' });
   }
 
-  public async put(request: Request, response: Response): Promise<any> {
-    const { id } = request.params;
+  // public async put(request: Request, response: Response): Promise<any> {
+  //   const { id } = request.params;
 
-    const reportRepository = getRepository(Report);
+  //   const reportRepository = getRepository(Report);
 
-    const report = await reportRepository.findOne(id);
+  //   const report = await reportRepository.findOne(id);
 
-    reportRepository.merge(report, request.body);
+  //   reportRepository.merge(report, request.body);
 
-    const updatedReport = await reportRepository.save(report);
+  //   const updatedReport = await reportRepository.save(report);
 
-    return response.send(updatedReport);
-  }
+  //   return response.send(updatedReport);
+  // }
 }

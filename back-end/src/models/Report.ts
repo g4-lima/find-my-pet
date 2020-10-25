@@ -6,7 +6,7 @@ import {
   OneToOne,
   JoinColumn,
 } from 'typeorm';
-import Image from './Image';
+// import Image from './Image';
 
 @Entity('reports')
 class Report {
@@ -34,11 +34,11 @@ class Report {
   @CreateDateColumn()
   created_at: Date;
 
-  @OneToOne(() => Image, image => image.report, {
-    cascade: ['insert', 'update'],
-  })
-  @JoinColumn({ name: 'report_id' })
-  image: Image;
+  // @OneToOne(() => Image, image => image.report, {
+  //   cascade: ['insert', 'update'],
+  // })
+  // @JoinColumn({ name: 'report_id' })
+  // images: Image[];
 }
 
 export default Report;
