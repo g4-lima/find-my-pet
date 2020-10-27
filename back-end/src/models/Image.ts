@@ -5,18 +5,19 @@ import {
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-// import Report from './Report';
+import Report from './Report';
 
-@Entity('images')
+@Entity('image')
 class Image {
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn('increment')
   id: number;
 
   @Column()
   path: string;
 
-  // @OneToOne(() => Report, report => report.images)
-  // @JoinColumn({ name: 'report_id' })
-  // report: Report;
+  @OneToOne(() => Report, report => report.image)
+  @JoinColumn({ name: 'report_id' })
+  report: Report;
 }
+
 export default Image;

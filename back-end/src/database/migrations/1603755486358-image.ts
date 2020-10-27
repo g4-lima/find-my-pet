@@ -4,15 +4,15 @@ export default class images1603487102278 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'images',
+        name: 'image',
         columns: [
           {
             name: 'id',
-            type: 'uuid',
+            type: 'integer',
             unsigned: true,
             isPrimary: true,
-            generationStrategy: 'uuid',
-            default: 'uuid_generate_v4()',
+            isGenerated: true,
+            generationStrategy: 'increment',
           },
           {
             name: 'path',
@@ -38,6 +38,6 @@ export default class images1603487102278 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('images');
+    await queryRunner.dropTable('image');
   }
 }

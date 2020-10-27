@@ -7,7 +7,7 @@ export default class ReportController {
     const reportRepository = getRepository(Report);
 
     const report = await reportRepository.find({
-      // relations: ['images'],
+      relations: ['image'],
     });
 
     return response.json(report);
@@ -19,8 +19,8 @@ export default class ReportController {
     const { id } = request.params;
 
     try {
-      const report = await reportRepository.findOne({
-        id,
+      const report = await reportRepository.findOne(id, {
+        relations: ['image'],
       });
 
       return response.json(report);
@@ -41,8 +41,13 @@ export default class ReportController {
 
     const reportRepository = getRepository(Report);
 
-    // const requestImages = request.files as Express.Multer.File[];
-    // const images = requestImages.map(image => ({ path: image.filename }));
+    const image = request.file;
+
+    const { filename } = image;
+
+    image.path = filename;
+
+    // console.log(image);
 
     const data = {
       responsible,
@@ -51,7 +56,7 @@ export default class ReportController {
       pet_name,
       pet_description,
       whatsapp,
-      // images,
+      image,
     };
 
     const report = reportRepository.create(data);
