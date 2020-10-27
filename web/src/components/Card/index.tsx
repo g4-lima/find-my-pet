@@ -13,6 +13,10 @@ export interface Report {
   pet_name: string;
   pet_description: string;
   wahtsapp: string;
+  image: {
+    id: number;
+    path: string;
+  };
 }
 
 interface ReportItemProps {
@@ -23,7 +27,10 @@ const Card: React.FC<ReportItemProps> = ({ report }) => {
   return (
     <Container key={report.id}>
       <div className="cover-photo">
-        <img src={AvatarImg} alt="" />
+        <img
+          src={`http://localhost:3333/uploads/${report.image.path}`}
+          alt={report.pet_name}
+        />
       </div>
       <div className="card-box">
         <div className="details">

@@ -17,6 +17,10 @@ interface Report {
   latitude: number;
   longitude: number;
   pet_name: string;
+  image: {
+    id: number;
+    path: string;
+  };
 }
 
 const PetsMap: React.FC = () => {
@@ -54,7 +58,10 @@ const PetsMap: React.FC = () => {
               maxWidth={160}
               className="map-popup"
             >
-              <img src={imgGallery1} alt="imagem da galeria" />
+              <img
+                src={`http://localhost:3333/uploads/${report.image.path}`}
+                alt={report.pet_name}
+              />
               {report.pet_name}
               <Link to={`/list/${report.id}`}>
                 <MdArrowForward size={20} color="#222a36" />

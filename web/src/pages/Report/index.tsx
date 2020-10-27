@@ -2,7 +2,7 @@ import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Map, TileLayer, Marker } from 'react-leaflet';
 import { Icon, LeafletMouseEvent } from 'leaflet';
-import { MdAddAPhoto } from 'react-icons/md';
+import { MdAddAPhoto, MdCheck } from 'react-icons/md';
 
 import Sidebar from '../../components/Sidebar';
 import markerImg from '../../assets/logo/marker2.svg';
@@ -26,8 +26,6 @@ const Report: React.FC = () => {
   const [whatsapp, setWhatsapp] = useState('');
   const [image, setImage] = useState<any>();
 
-  // const [previewImages, setPreviewImages] = useState<string[]>([]);
-
   const icon = new Icon({
     iconUrl: markerImg,
     iconSize: [72, 72],
@@ -46,16 +44,10 @@ const Report: React.FC = () => {
 
   function handleSelectImage(event: ChangeEvent<HTMLInputElement>) {
     if (event.target.files) {
-      const selectedImages = event.target.files[0];
+      const selectedImage = event.target.files[0];
 
-      setImage(selectedImages);
+      setImage(selectedImage);
     }
-
-    // const selectedImagesPreview = selectedImages.map(img => {
-    //   return URL.createObjectURL(img);
-    // });
-
-    // setPreviewImages(selectedImagesPreview);
   }
 
   async function handleSubmit(event: FormEvent) {
@@ -72,16 +64,6 @@ const Report: React.FC = () => {
     data.append('pet_description', pet_description);
     data.append('whatsapp', whatsapp);
     data.append('image', image);
-
-    // console.log(
-    //   responsible,
-    //   pet_name,
-    //   latitude,
-    //   longitude,
-    //   pet_description,
-    //   whatsapp,
-    //   image,
-    // );
 
     await api.post('/report', data);
 
@@ -136,20 +118,17 @@ const Report: React.FC = () => {
           <label htmlFor="images">Foto</label>
 
           <div className="images-container">
-            {/* {previewImages.map(img => {
-              return <img key={image} src={image} alt={pet_name} />;
-            })} */}
-
-            <label htmlFor="image" className="new-image">
-              <MdAddAPhoto size={24} color="#7ba8ff" />
-            </label>
+            {!image ? (
+              <label htmlFor="image" className="new-image">
+                <MdAddAPhoto size={24} color="#7ba8ff" />
+              </label>
+            ) : (
+              <label htmlFor="image" className="selected-image">
+                <MdCheck size={24} color="green" />
+              </label>
+            )}
           </div>
-          <input
-            // multiple
-            onChange={handleSelectImage}
-            type="file"
-            id="image"
-          />
+          <input onChange={handleSelectImage} type="file" id="image" />
         </InputBlock>
 
         <InputBlock>

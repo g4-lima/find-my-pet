@@ -99,6 +99,17 @@ export const InputBlock = styled.div`
     align-items: center;
   }
 
+  .selected-image {
+    height: 80px;
+    background: #d3e2d5;
+    border: 1px dashed green;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   input[type='file'] {
     visibility: hidden;
     margin: 0;
