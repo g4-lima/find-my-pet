@@ -23,7 +23,11 @@ const PetDetail: React.FC = () => {
     <Container>
       <Content>
         <ListContainer>
-          {report && <Card key={report.id} report={report} />}
+          {report ? (
+            <Card key={report.id} report={report} />
+          ) : (
+            <h1>Pet não encontrado!</h1>
+          )}
         </ListContainer>
       </Content>
 

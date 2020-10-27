@@ -22,7 +22,7 @@ interface Report {
 const PetsMap: React.FC = () => {
   const icon = new Icon({
     iconUrl: markerImg,
-    iconSize: [72, 72],
+    iconSize: [64, 64],
     iconAnchor: [29, 68],
     popupAnchor: [8, -60],
   });
