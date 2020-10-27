@@ -24,7 +24,7 @@ const Report: React.FC = () => {
   const [pet_name, setPetName] = useState('');
   const [pet_description, setPetDescription] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
-  const [image, setImages] = useState<File>();
+  const [image, setImage] = useState<any>();
 
   // const [previewImages, setPreviewImages] = useState<string[]>([]);
 
@@ -45,15 +45,11 @@ const Report: React.FC = () => {
   }
 
   function handleSelectImage(event: ChangeEvent<HTMLInputElement>) {
-    if (!event.target.files) {
-      return;
+    if (event.target.files) {
+      const selectedImages = event.target.files[0];
+
+      setImage(selectedImages);
     }
-
-    console.log(event.target.files);
-
-    const selectedImages = Array.from(event.target.files);
-
-    setImages(selectedImages[0]);
 
     // const selectedImagesPreview = selectedImages.map(img => {
     //   return URL.createObjectURL(img);
@@ -67,38 +63,27 @@ const Report: React.FC = () => {
 
     const { latitude, longitude } = position;
 
-    // const data = new FormData();
+    const data = new FormData();
 
-    // data.append('responsible', responsible);
-    // data.append('pet_name', pet_name);
-    // data.append('latitude', String(latitude));
-    // data.append('longitude', String(longitude));
-    // data.append('pet_description', pet_description);
-    // data.append('whatsapp', whatsapp);
+    data.append('responsible', responsible);
+    data.append('pet_name', pet_name);
+    data.append('latitude', String(latitude));
+    data.append('longitude', String(longitude));
+    data.append('pet_description', pet_description);
+    data.append('whatsapp', whatsapp);
+    data.append('image', image);
 
-    // images.forEach(image => {
-    //   data.append('images', image);
-    // });
+    // console.log(
+    //   responsible,
+    //   pet_name,
+    //   latitude,
+    //   longitude,
+    //   pet_description,
+    //   whatsapp,
+    //   image,
+    // );
 
-    console.log(
-      responsible,
-      pet_name,
-      latitude,
-      longitude,
-      pet_description,
-      whatsapp,
-      image,
-    );
-
-    await api.post('/report', {
-      responsible,
-      pet_name,
-      latitude,
-      longitude,
-      pet_description,
-      whatsapp,
-      image,
-    });
+    await api.post('/report', data);
 
     alert('Pet cadastrado com sucesso!');
 
