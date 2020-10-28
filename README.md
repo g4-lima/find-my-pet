@@ -12,7 +12,9 @@
 <h1 align="center">
   <img align="center" alt="map-page" width="640px" src="web/.github/home-find-my-pet.png" />
 </h1>
-  
+
+<br/>
+
 ## About project
 
 Application created to help localize lost pets, based on location. <br/>
@@ -20,6 +22,8 @@ To report the lost pet, users must provide the last location the pet was seen, t
 Anyone who has information on the lost pet reported can contact the pet's responsible via app.
 
 ---
+
+<br/>
 
 ## Pages
 
@@ -38,6 +42,8 @@ Anyone who has information on the lost pet reported can contact the pet's respon
   
 ---  
 
+<br/>
+
 ## Technologies
 
 [TypeScript](https://www.typescriptlang.org/)
@@ -55,6 +61,8 @@ Anyone who has information on the lost pet reported can contact the pet's respon
 - [Styled-components](https://styled-components.com/)
  
 ---
+
+<br/>
 
 ## Getting started
 
