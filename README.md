@@ -1,5 +1,7 @@
 # Find My Pet
 
+<br/>
+
 <p align="center">
   <a href="#about-project">About project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#pages">Pages</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
