@@ -7,39 +7,44 @@
 </p>
 
 <h1 align="center">
-  <img align="center" alt="map-page" width="560px" src="web/.github/home-find-my-pet.png" />
+  <img align="center" alt="map-page" width="640px" src="web/.github/home-find-my-pet.png" />
 </h1>
   
 ## About project
 
-Application created to help localize lost pets, based on location. 
-To report the lost pet, users must provide the last location the pet was seen.The pet's name, description and upload a photo.
+Application created to help localize lost pets, based on location. <br/>
+To report the lost pet, users must provide the last location the pet was seen.The pet's name, description and upload a photo. <br/>
 Anyone who has information on the lost pet reported can contact the pet's responsible via app.
 
 ---
 
   ### Map Page
-  <img align="center" alt="map-page" width="560px" src="https://media4.giphy.com/media/DlRwIxWpJSDHBX33t6/giphy.gif" />
+  <img align="center" alt="map-page" width="640px" src="https://media4.giphy.com/media/DlRwIxWpJSDHBX33t6/giphy.gif" />
 
   ### Search Page
-  <img align="center" alt="search-page" width="560px" src="https://media1.giphy.com/media/hkZRb22CTD0PyolUFR/giphy.gif" />
+  <img align="center" alt="search-page" width="640px" src="https://media1.giphy.com/media/hkZRb22CTD0PyolUFR/giphy.gif" />
 
   ### Report Page
-  <img align="center" alt="report-page" width="560px" src="https://media3.giphy.com/media/0r4oVfLPxyVzZ7L7EZ/giphy.gif" />
+  <img align="center" alt="report-page" width="640px" src="https://media3.giphy.com/media/0r4oVfLPxyVzZ7L7EZ/giphy.gif" />
   
 ---  
 
 ## Technologies
 
+[TypeScript](https://www.typescriptlang.org/)
+<br/>
+
 ### Back-end: 
 -[Node.js](https://nodejs.org/en/), 
 -[PostgreSQL](https://www.postgresql.org/), 
 -[Docker](https://www.docker.com/)
+
+<br/>
+
 ### Web:
 -[ReactJS](https://reactjs.org/), 
 -[Styled-components](https://styled-components.com/)
 
-[TypeScript](https://www.typescriptlang.org/)
  
 ---
 
@@ -69,6 +74,6 @@ $ yarn dev:server
 ### Web
 
 ```sh
-$ yarn web start
+$ yarn start
 Start client, be sure if server (backend) is running
 ```
