@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
+
 import Report from '../models/Report';
+import reportView from '../views/reports_view';
 
 export default class ReportController {
   public async get(request: Request, response: Response): Promise<Response> {
@@ -46,8 +48,6 @@ export default class ReportController {
     const { filename } = image;
 
     image.path = filename;
-
-    // console.log(image);
 
     const data = {
       responsible,
