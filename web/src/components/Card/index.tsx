@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdLocationOn } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 import AvatarImg from '../../assets/img/fmp1.jpeg';
 
@@ -24,6 +25,11 @@ interface ReportItemProps {
 }
 
 const Card: React.FC<ReportItemProps> = ({ report }) => {
+  function handleWhatsappLink() {
+    const url = `https://web.whatsapp.com/send?phone=+55${report.wahtsapp}`;
+    window.open(url, '_blank');
+  }
+
   return (
     <Container key={report.id}>
       <div className="cover-photo">
@@ -44,7 +50,9 @@ const Card: React.FC<ReportItemProps> = ({ report }) => {
             <h3>3 km</h3>
           </div>
         </div>
-        <button type="button">Entar em contato</button>
+        <button type="button" onClick={handleWhatsappLink}>
+          Entar em contato
+        </button>
       </div>
     </Container>
   );

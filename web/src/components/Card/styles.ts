@@ -15,11 +15,10 @@ export const Container = styled.div`
   }
 
   img {
-    width: 260px;
+    width: 320px;
     height: 100%;
 
     border-radius: 8px 0 0 8px;
-    border: 1px solid #d3e2d5;
     object-fit: cover;
   }
 
@@ -36,6 +35,10 @@ export const Container = styled.div`
       height: 240px;
       padding: 16px;
 
+      h2 {
+        margin-bottom: 16px;
+      }
+
       p {
         height: 160px;
         margin-top: 8px;
@@ -50,7 +53,7 @@ export const Container = styled.div`
 
     .location {
       display: flex;
-      padding: 16px;
+      padding: 16px 16px 0 0;
       align-items: baseline;
       margin-right: 8px;
 
@@ -72,13 +75,16 @@ export const Container = styled.div`
 
     button {
       height: 64px;
-      margin-top: 16px;
       font-family: 'Roboto', sans-serif;
       font-size: 20px;
       color: #222a36;
       background: #31d08e;
       border-radius: 0 0 8px 0;
       cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      line-height: 64px;
+      margin-top: 14px;
 
       &:hover {
         background: ${shade(0.1, '#31d08e')};

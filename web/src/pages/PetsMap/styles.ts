@@ -11,6 +11,8 @@ export const Container = styled.div`
   .map-popup .leaflet-popup-content-wrapper {
     background: #e4e0dc;
     border-radius: 4px;
+    border: 1px solid #222a36;
+    box-shadow: none;
   }
 
   .map-popup .leaflet-popup-content {
@@ -22,11 +24,12 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
     align-content: center;
+    margin: 4px;
   }
 
   .map-popup img {
-    width: 40px;
-    height: 40px;
+    width: 56px;
+    height: 56px;
     object-fit: cover;
   }
 
