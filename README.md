@@ -6,7 +6,9 @@
   <a href="#getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
+<h1 align="center">
   <img align="center" alt="map-page" width="560px" src="web/.github/home-find-my-pet.png" />
+</h1>
   
 ## About project
 
@@ -24,11 +26,19 @@ Anyone who has information on the lost pet reported can contact the pet's respon
 
   ### Report Page
   <img align="center" alt="report-page" width="560px" src="https://media3.giphy.com/media/0r4oVfLPxyVzZ7L7EZ/giphy.gif" />
+  
+---  
 
 ## Technologies
 
-### Back-end: [Node.js](https://nodejs.org/en/), [PostgreSQL](https://www.postgresql.org/), [Docker](https://www.docker.com/)
-### Web:[ReactJS](https://reactjs.org/), [Styled-components](https://styled-components.com/)
+### Back-end: 
+-[Node.js](https://nodejs.org/en/), 
+-[PostgreSQL](https://www.postgresql.org/), 
+-[Docker](https://www.docker.com/)
+### Web:
+-[ReactJS](https://reactjs.org/), 
+-[Styled-components](https://styled-components.com/)
+
 [TypeScript](https://www.typescriptlang.org/)
  
 ---
