@@ -5,7 +5,6 @@ import { Icon } from 'leaflet';
 import { MdArrowForward } from 'react-icons/md';
 
 import api from '../../services/api';
-import imgGallery1 from '../../assets/img/fmp1.jpeg';
 import Sidebar from '../../components/Sidebar';
 import markerImg from '../../assets/logo/marker2.svg';
 

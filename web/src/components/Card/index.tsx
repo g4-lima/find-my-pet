@@ -1,8 +1,6 @@
 import React from 'react';
 import { MdLocationOn } from 'react-icons/md';
-import { Link } from 'react-router-dom';
-
-import AvatarImg from '../../assets/img/fmp1.jpeg';
+import { getDistance, convertDistance } from 'geolib';
 
 import { Container } from './styles';
 
@@ -13,7 +11,7 @@ export interface Report {
   responsible: string;
   pet_name: string;
   pet_description: string;
-  wahtsapp: string;
+  whatsapp: string;
   image: {
     id: number;
     path: string;
@@ -26,9 +24,14 @@ interface ReportItemProps {
 
 const Card: React.FC<ReportItemProps> = ({ report }) => {
   function handleWhatsappLink() {
-    const url = `https://web.whatsapp.com/send?phone=+55${report.wahtsapp}`;
+    const url = `https://web.whatsapp.com/send?phone=550${report.whatsapp}`;
     window.open(url, '_blank');
   }
+
+  const distance = getDistance(
+    { latitude: -23.0422819, longitude: -46.9708041 },
+    { latitude: report.latitude, longitude: report.longitude },
+  );
 
   return (
     <Container key={report.id}>
@@ -47,7 +50,7 @@ const Card: React.FC<ReportItemProps> = ({ report }) => {
           </div>
           <div className="location">
             <MdLocationOn size={12} />
-            <h3>3 km</h3>
+            <h3>{Math.round(convertDistance(distance, 'km'))} km</h3>
           </div>
         </div>
         <button type="button" onClick={handleWhatsappLink}>

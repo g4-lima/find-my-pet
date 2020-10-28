@@ -42,6 +42,7 @@ export const Container = styled.div`
       p {
         height: 160px;
         margin-top: 8px;
+        line-height: 30px;
       }
 
       p + p {

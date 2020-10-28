@@ -147,7 +147,6 @@ const Report: React.FC = () => {
             id="whatsapp"
             value={whatsapp}
             onChange={event => setWhatsapp(event.target.value)}
-            placeholder="(xx) xxxxx - xxxx"
           />
         </InputBlock>
 
