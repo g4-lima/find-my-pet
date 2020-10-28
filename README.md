@@ -2,6 +2,7 @@
 
 <p align="center">
   <a href="#about-project">About project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#pages">Pages</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
@@ -19,6 +20,8 @@ To report the lost pet, users must provide the last location the pet was seen, t
 Anyone who has information on the lost pet reported can contact the pet's responsible via app.
 
 ---
+
+## Pages
 
   ### Map Page
   <img align="center" alt="map-page" width="640px" src="https://media4.giphy.com/media/DlRwIxWpJSDHBX33t6/giphy.gif" />
