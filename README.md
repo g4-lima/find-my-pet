@@ -6,6 +6,8 @@
   <a href="#getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
+<br/>
+
 <h1 align="center">
   <img align="center" alt="map-page" width="640px" src="web/.github/home-find-my-pet.png" />
 </h1>
@@ -20,9 +22,13 @@ Anyone who has information on the lost pet reported can contact the pet's respon
 
   ### Map Page
   <img align="center" alt="map-page" width="640px" src="https://media4.giphy.com/media/DlRwIxWpJSDHBX33t6/giphy.gif" />
+  
+<br/>
 
   ### Search Page
   <img align="center" alt="search-page" width="640px" src="https://media1.giphy.com/media/hkZRb22CTD0PyolUFR/giphy.gif" />
+  
+<br/>  
 
   ### Report Page
   <img align="center" alt="report-page" width="640px" src="https://media3.giphy.com/media/0r4oVfLPxyVzZ7L7EZ/giphy.gif" />
@@ -32,19 +38,18 @@ Anyone who has information on the lost pet reported can contact the pet's respon
 ## Technologies
 
 [TypeScript](https://www.typescriptlang.org/)
-<br/>
 
-### Back-end: 
--[Node.js](https://nodejs.org/en/), 
--[PostgreSQL](https://www.postgresql.org/), 
--[Docker](https://www.docker.com/)
+### Back-end:
 
-<br/>
+- [Node.js](https://nodejs.org/en/), 
+- [PostgreSQL](https://www.postgresql.org/), 
+- [Docker](https://www.docker.com/)
+
 
 ### Web:
--[ReactJS](https://reactjs.org/), 
--[Styled-components](https://styled-components.com/)
 
+- [ReactJS](https://reactjs.org/), 
+- [Styled-components](https://styled-components.com/)
  
 ---
 
