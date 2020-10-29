@@ -20,8 +20,8 @@
 ## About project
 
 Application created to help localize lost pets, based on location. <br/>
-To report the lost pet, users must provide the last location the pet was seen, the pet's name, description and upload a photo. <br/>
-Anyone who has information on the lost pet reported can contact the pet's responsible via app.
+In order to report a lost pet, users must provide the last location the pet was seen, the pet's name, description and upload a photo. <br/>
+Anyone who has information on the lost pet can contact the pet's responsible via app.
 
 ---
 
