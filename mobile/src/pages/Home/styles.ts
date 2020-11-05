@@ -1,11 +1,7 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
-  flex-direction: column;
+export const Title = styled.Text`
+  position: absolute;
+  z-index: 1;
+  font-size: 30px;
 `;
-
-export const Image = styled.ImageBackground`
-  height: 80vh;
-`;
-
-export const Title = styled.Text``;
