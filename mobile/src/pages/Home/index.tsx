@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Image, Text } from 'react-native';
 import MapView from 'react-native-maps';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import {
   Container,
@@ -10,6 +10,9 @@ import {
   MapButtom,
   ReportButtom,
   SearchButtom,
+  MapButtonTitle,
+  ReportButtonTitle,
+  SeacrhButtonTitle,
 } from './styles';
 
 const Home: React.FC = () => {
@@ -35,9 +38,16 @@ const Home: React.FC = () => {
         }}
       />
       <BottomBar>
-        <MapButtom title="map" onPress={() => {}} />
-        <ReportButtom title="report" onPress={() => {}} />
-        <SearchButtom title="search" onPress={() => {}} />
+        <MapButtom onPress={() => {}} activeOpacity={0.95}>
+          <Icon name="explore" size={50} color="#fff" />
+          <MapButtonTitle>Mapa</MapButtonTitle>
+        </MapButtom>
+        <ReportButtom onPress={() => {}} activeOpacity={0.95}>
+          <ReportButtonTitle>Reportar pet</ReportButtonTitle>
+        </ReportButtom>
+        <SearchButtom onPress={() => {}} activeOpacity={0.95}>
+          <SeacrhButtonTitle>Pesquisar pets</SeacrhButtonTitle>
+        </SearchButtom>
       </BottomBar>
     </Container>
   );
