@@ -39,13 +39,25 @@ const Home: React.FC = () => {
       />
       <BottomBar>
         <MapButtom onPress={() => {}} activeOpacity={0.95}>
-          <Icon name="explore" size={50} color="#fff" />
+          <Icon
+            name="explore"
+            size={40}
+            color="#e4e0dc"
+            style={{ padding: 10 }}
+          />
           <MapButtonTitle>Mapa</MapButtonTitle>
         </MapButtom>
         <ReportButtom onPress={() => {}} activeOpacity={0.95}>
+          <Icon name="pets" size={40} color="#e4e0dc" style={{ padding: 10 }} />
           <ReportButtonTitle>Reportar pet</ReportButtonTitle>
         </ReportButtom>
         <SearchButtom onPress={() => {}} activeOpacity={0.95}>
+          <Icon
+            name="search"
+            size={40}
+            color="#e4e0dc"
+            style={{ padding: 10 }}
+          />
           <SeacrhButtonTitle>Pesquisar pets</SeacrhButtonTitle>
         </SearchButtom>
       </BottomBar>

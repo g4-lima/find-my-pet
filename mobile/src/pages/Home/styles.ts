@@ -14,9 +14,11 @@ export const TopBar = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-size: 16px;
+  font-size: 20px;
   color: #e4e0dc;
   margin: auto;
+  font-family: 'Roboto';
+  font-weight: bold;
 `;
 
 export const BottomBar = styled.View`
@@ -35,9 +37,11 @@ export const MapButtom = styled.TouchableOpacity`
 
 export const MapButtonTitle = styled.Text`
   color: #e4e0dc;
-  font-size: 24px;
-  text-align: center;
-  top: 50%;
+  font-size: 18px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  margin-left: 20px;
+  margin-top: 8px;
 `;
 
 export const ReportButtom = styled.TouchableOpacity`
@@ -46,7 +50,14 @@ export const ReportButtom = styled.TouchableOpacity`
   background-color: #7ba8ff;
 `;
 
-export const ReportButtonTitle = styled.Text``;
+export const ReportButtonTitle = styled.Text`
+  color: #e4e0dc;
+  font-size: 18px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  margin-left: 16px;
+  margin-top: 8px;
+`;
 
 export const SearchButtom = styled.TouchableOpacity`
   height: 100%;
@@ -54,4 +65,10 @@ export const SearchButtom = styled.TouchableOpacity`
   background-color: #31d08e;
 `;
 
-export const SeacrhButtonTitle = styled.Text``;
+export const SeacrhButtonTitle = styled.Text`
+  color: #e4e0dc;
+  font-size: 18px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  margin-left: 16px;
+`;
