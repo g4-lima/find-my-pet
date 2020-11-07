@@ -17,8 +17,7 @@ export const Title = styled.Text`
   font-size: 20px;
   color: #e4e0dc;
   margin: auto;
-  font-family: 'Roboto';
-  font-weight: bold;
+  font-family: 'Roboto-Light';
 `;
 
 export const BottomBar = styled.View`
@@ -38,8 +37,7 @@ export const MapButtom = styled.TouchableOpacity`
 export const MapButtonTitle = styled.Text`
   color: #e4e0dc;
   font-size: 18px;
-  font-family: 'Roboto';
-  font-weight: 300;
+  font-family: 'Roboto-Light';
   margin-left: 20px;
   margin-top: 8px;
 `;
@@ -53,8 +51,7 @@ export const ReportButtom = styled.TouchableOpacity`
 export const ReportButtonTitle = styled.Text`
   color: #e4e0dc;
   font-size: 18px;
-  font-family: 'Roboto';
-  font-weight: 300;
+  font-family: 'Roboto-Light';
   margin-left: 16px;
   margin-top: 8px;
 `;
@@ -68,7 +65,7 @@ export const SearchButtom = styled.TouchableOpacity`
 export const SeacrhButtonTitle = styled.Text`
   color: #e4e0dc;
   font-size: 18px;
-  font-family: 'Roboto';
+  font-family: 'Roboto-Light';
   font-weight: 300;
   margin-left: 16px;
 `;
