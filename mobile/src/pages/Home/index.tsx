@@ -1,3 +1,8 @@
+import {
+  NavigationProp,
+  NavigationState,
+  NavigatorScreenParams,
+} from '@react-navigation/native';
 import React from 'react';
 import MapView from 'react-native-maps';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -15,7 +20,11 @@ import {
   SeacrhButtonTitle,
 } from './styles';
 
-const Home: React.FC = () => {
+interface Props {
+  navigation: NavigationProp<NavigationState, NavigatorScreenParams>;
+}
+
+const Home: React.FC<Props> = ({ navigation }) => {
   return (
     <Container>
       <TopBar>
@@ -24,7 +33,7 @@ const Home: React.FC = () => {
       <MapView
         style={{
           position: 'absolute',
-          top: '8%',
+          top: '4%',
           left: 0,
           right: 0,
           bottom: '16%',
@@ -38,7 +47,7 @@ const Home: React.FC = () => {
         }}
       />
       <BottomBar>
-        <MapButtom onPress={() => {}} activeOpacity={0.95}>
+        <MapButtom onPress={() => {}} activeOpacity={0.88}>
           <Icon
             name="explore"
             size={40}
@@ -47,11 +56,13 @@ const Home: React.FC = () => {
           />
           <MapButtonTitle>Mapa</MapButtonTitle>
         </MapButtom>
-        <ReportButtom onPress={() => {}} activeOpacity={0.95}>
+        <ReportButtom onPress={() => {}} activeOpacity={0.88}>
           <Icon name="pets" size={40} color="#e4e0dc" style={{ padding: 10 }} />
           <ReportButtonTitle>Reportar pet</ReportButtonTitle>
         </ReportButtom>
-        <SearchButtom onPress={() => {}} activeOpacity={0.95}>
+        <SearchButtom
+          onPress={() => navigation.navigate('Search')}
+          activeOpacity={0.88}>
           <Icon
             name="search"
             size={40}

@@ -9,12 +9,12 @@ export const TopBar = styled.View`
   top: 0;
   width: 100%;
   background-color: #222a36;
-  height: 8%;
+  height: 4%;
   align-items: center;
 `;
 
 export const Title = styled.Text`
-  font-size: 20px;
+  font-size: 16px;
   color: #e4e0dc;
   margin: auto;
   font-family: 'Roboto-Light';
