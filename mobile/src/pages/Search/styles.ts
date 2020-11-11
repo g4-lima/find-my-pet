@@ -14,10 +14,12 @@ export const TopBar = styled.View`
 `;
 
 export const GoBackButton = styled.TouchableOpacity`
-  background-color: #e4e0dc;
-  height: 48px;
-  width: 48px;
+  background-color: #222a36;
+  height: 40px;
+  width: 40px;
   border-radius: 4px;
+  align-items: center;
+  justify-content: space-around;
 `;
 
 export const Title = styled.Text`

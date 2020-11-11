@@ -17,7 +17,7 @@ const Search: React.FC<Props> = ({ navigation }) => {
     <Container>
       <TopBar>
         <GoBackButton onPress={() => navigation.goBack()} activeOpacity={0.88}>
-          <Icon name="navigate_before" size={40} color="#222a36" />
+          <Icon name="chevron-left" size={40} color="#e4e0dc" />
         </GoBackButton>
         <Title>Pesquisar Pets</Title>
       </TopBar>
