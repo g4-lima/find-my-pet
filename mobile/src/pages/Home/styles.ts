@@ -38,14 +38,14 @@ export const MapButtonTitle = styled.Text`
   color: #e4e0dc;
   font-size: 18px;
   font-family: 'Roboto-Light';
-  margin-left: 20px;
+  margin-left: 16px;
   margin-top: 8px;
 `;
 
 export const ReportButtom = styled.TouchableOpacity`
   height: 100%;
   width: 33.33%;
-  background-color: #7ba8ff;
+  background-color: #5494cf;
 `;
 
 export const ReportButtonTitle = styled.Text`
@@ -66,6 +66,6 @@ export const SeacrhButtonTitle = styled.Text`
   color: #e4e0dc;
   font-size: 18px;
   font-family: 'Roboto-Light';
-  font-weight: 300;
   margin-left: 16px;
+  margin-top: 8px;
 `;

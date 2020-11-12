@@ -4,7 +4,7 @@ interface ICard {
   animation: boolean;
 }
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
   flex: 1;
   background-color: #e4e0dc;
 `;
@@ -12,7 +12,7 @@ export const Container = styled.View`
 export const TopBar = styled.View`
   flex-direction: row;
   align-items: center;
-  padding: 16px;
+  padding: 12px;
   justify-content: space-between;
   background-color: #222a36;
 `;
@@ -31,13 +31,13 @@ export const Title = styled.Text`
   font-size: 24px;
   color: #e4e0dc;
   margin: auto;
-  padding-right: 80px;
+  padding-right: 40px;
 `;
 
 export const Card = styled.View<ICard>`
   background-color: #fff;
   width: 95%;
-  height: ${(props) => (props.animation ? '520px' : '360px')};
+  height: ${(props) => (props.animation ? '520px' : '340px')};
   margin-top: 16px;
   margin-left: auto;
   margin-right: auto;
@@ -74,7 +74,8 @@ export const Location = styled.Text`
 `;
 
 export const CardBody = styled.View`
-  margin: 8px;
+  margin: 4px;
+  padding: 4px;
 `;
 
 export const DescriptionTitle = styled.Text`
@@ -96,6 +97,7 @@ export const Bottom = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 4px;
 `;
 
 export const Responsible = styled.Text`
@@ -108,10 +110,18 @@ export const WhatsappButton = styled.TouchableOpacity`
   width: 160px;
   height: 48px;
   border-radius: 4px;
-  background-color: green;
+  background-color: #31d08e;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const WhatsappButtonText = styled.Text`
+  font-family: Roboto-Regular;
+  color: #fff;
+  font-size: 14px;
 `;
 
 export const ShowButton = styled.TouchableOpacity`
   margin: auto;
-  padding-top: 8px;
 `;

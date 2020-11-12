@@ -49,27 +49,27 @@ const Home: React.FC<Props> = ({ navigation }) => {
       <BottomBar>
         <MapButtom onPress={() => {}} activeOpacity={0.88}>
           <Icon
-            name="explore"
+            name="account-circle"
             size={40}
             color="#e4e0dc"
             style={{ padding: 10 }}
           />
-          <MapButtonTitle>Mapa</MapButtonTitle>
+          <MapButtonTitle>Log in</MapButtonTitle>
         </MapButtom>
         <ReportButtom onPress={() => {}} activeOpacity={0.88}>
           <Icon name="pets" size={40} color="#e4e0dc" style={{ padding: 10 }} />
           <ReportButtonTitle>Reportar pet</ReportButtonTitle>
         </ReportButtom>
         <SearchButtom
-          onPress={() => navigation.navigate('Search')}
+          onPress={() => navigation.navigate('List')}
           activeOpacity={0.88}>
           <Icon
-            name="search"
+            name="format-list-bulleted"
             size={40}
             color="#e4e0dc"
             style={{ padding: 10 }}
           />
-          <SeacrhButtonTitle>Pesquisar pets</SeacrhButtonTitle>
+          <SeacrhButtonTitle>Listar pets</SeacrhButtonTitle>
         </SearchButtom>
       </BottomBar>
     </Container>
