@@ -1,5 +1,9 @@
 import styled from 'styled-components/native';
 
+interface ICard {
+  animation: boolean;
+}
+
 export const Container = styled.View`
   flex: 1;
   background-color: #e4e0dc;
@@ -30,10 +34,10 @@ export const Title = styled.Text`
   padding-right: 80px;
 `;
 
-export const Card = styled.View`
+export const Card = styled.View<ICard>`
   background-color: #fff;
   width: 95%;
-  height: 520px;
+  height: ${(props) => (props.animation ? '520px' : '360px')};
   margin-top: 16px;
   margin-left: auto;
   margin-right: auto;

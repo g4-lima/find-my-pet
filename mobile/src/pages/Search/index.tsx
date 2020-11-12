@@ -42,7 +42,7 @@ const Search: React.FC<Props> = ({ navigation }) => {
         <Title>Pesquisar Pets</Title>
       </TopBar>
 
-      <Card hide-show={show}>
+      <Card animation={show}>
         <Image
           source={{
             uri:
